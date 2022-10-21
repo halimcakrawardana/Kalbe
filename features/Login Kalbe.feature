@@ -1,6 +1,6 @@
-Feature: Kalbe Login
+Feature: Login
 
-Scenario: Login
+Scenario: Valid Login
 
   Given I open Kalbe login page
   When Click Login button
