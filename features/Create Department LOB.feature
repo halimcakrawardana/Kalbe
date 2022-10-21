@@ -11,7 +11,7 @@ Scenario: Create Department LOB
   Then Wait for 3s
   Then Click Master button
   Then Click Department LOB button
-  Then Click Create New button
+  Then LOB Click Create New button
   Then Input LOB
   Then Input LOB Description
   Then Input COA Segment 2

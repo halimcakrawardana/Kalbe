@@ -1,49 +1,35 @@
 const { client } = require('nightwatch-api');
 const { Given, Then, When } = require('cucumber');
 
-let LOB = 'LOB'
-let description = 'desc'
-let coasegment2 = 'coa2'
-let coasegment4 = 'coa4'
-let coasegment6= 'coa'
+let userid = 'halim1'
+let namauser = 'desc'
+let nik = 'coa2'
+let email = 'coa4'
 
-Given(/^Click Master button$/, () => {
-    client.useXpath()
-    client.click("//a[contains(.,'MASTER')]");
-  });
-
-Then(/^Click Department LOB button$/, () => {
-    client.click("//a[.='DEPARTMENT LOB']");
-  });
-
-Then(/^Click Create New button$/, () => {
+Then(/^User Click Create New button$/, () => {
     client.click("//a[.='Create New']");
   });
 
-Then(/^Input LOB$/, () => {
-    client.setValue("//input[@id='txtLOB']", [LOB]);
+Then(/^Input User ID$/, () => {
+    client.setValue("//input[@id='User_txtUserID']", [userid]);
   });
 
-  Then(/^Input LOB Description$/, () => {
-    client.setValue("//input[@id='txtLOBDescription']", [description]);
+  Then(/^Input Nama User$/, () => {
+    client.setValue("//input[@id='User_txtNamaUser']", [namauser]);
   });
   
-  Then(/^Input COA Segment 2$/, () => {
-    client.setValue("//div[3]//input[@class='form-control text-uppercase']", [coasegment2]);
+  Then(/^Input NIK$/, () => {
+    client.setValue("//div[3]//input[@class='form-control text-uppercase']", [nik]);
   });
 
-  Then(/^Input COA Segment 4$/, () => {
-    client.setValue("//div[4]//input[@class='form-control text-uppercase']", [coasegment4]);
-  });
-
-  Then(/^Input COA Segment 6$/, () => {
-    client.setValue("//div[5]//input[@class='form-control text-uppercase']", [coasegment6]);
+  Then(/^Input Email$/, () => {
+    client.setValue("//input[@id='User_txtEmail']", [email]);
   });
 
   Then(/^Click Create$/, () => {
-    client.click("//input[@name='btn']");
+    client.click("//button[@class='btn btn-primary']");
   });
 
   Then(/^Verify Success$/, () => {
-    client.isPresent('Master Department LOB', "//h2[.='Master Department LOB']");
+    client.isPresent('Master User', "//h2[.='Master User']");
   });
