@@ -1,6 +1,6 @@
-Feature: User
+Feature: Department LOB
 
-Scenario: Create User
+Scenario: Create Department LOB
 
   Given I open Kalbe login page
   When Click Login button
