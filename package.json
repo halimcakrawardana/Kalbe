@@ -1,0 +1,23 @@
+{
+  "name": "kalbe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "e2e-test": "cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^106.0.1",
+    "cucumber": "^6.0.7",
+    "cucumber-pretty": "^6.0.1",
+    "nightwatch": "^1.7.13",
+    "nightwatch-api": "^3.0.2",
+    "playwright": "^1.27.1"
+  },
+  "dependencies": {
+    "2captcha": "^3.0.5"
+  }
+}
